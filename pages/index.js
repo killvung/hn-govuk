@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Layout from '../components/layout'
 import Accordion from '../components/Accordion'
 import styles from '../styles/Home.module.css'
+import Footer from '../components/footer'
 
 const TITLE = "?";
 
@@ -26,6 +27,7 @@ export default function Home() {
           <Accordion />
         </div>
       </main >
+      <Footer />
     </Layout>
   )
 }
