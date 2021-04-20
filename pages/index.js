@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 
 import Layout from '../components/layout'
-import Accordion from '../components/Accordion'
+import NewsRow from '../components/NewsRow';
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
 
@@ -24,7 +24,13 @@ export default function Home() {
       <main className={styles.main}>
         {/* Enable Govuk JS interaction anything below this element */}
         <div className="js-enabled">
-          <Accordion />
+          <ul>
+            <li><NewsRow></NewsRow></li>
+            <li><NewsRow></NewsRow></li>
+            <li><NewsRow></NewsRow></li>
+            <li><NewsRow></NewsRow></li>
+            <li><NewsRow></NewsRow></li>
+          </ul>
         </div>
       </main >
       <Footer />
