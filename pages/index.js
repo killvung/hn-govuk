@@ -1,7 +1,7 @@
 /**
 TODO: 
-  Create static data from HN so you don't need to abuse the api
-  Afterward, constructing the list with ul
+  Create mock data from HN api
+  constructing the list with ul
 **/
 import { useEffect } from 'react'
 import Head from 'next/head'
