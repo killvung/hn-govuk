@@ -3,6 +3,7 @@ import Head from 'next/head'
 
 import Layout from '../components/layout'
 import NewsRow from '../components/NewsRow';
+import NewsManager from '../components/NewsManager'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
 
@@ -27,20 +28,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className="js-enabled">
-          <ul>
-            {data.map(({ descendants, score, time, title, url }, id) => (
-              <li key={id}>
-                <NewsRow
-                  descendants={descendants}
-                  score={score}
-                  timestamp={time}
-                  title={title}
-                  url={url}
-                  rootId={descendants}
-                />
-              </li>
-            ))}
-          </ul>
+          <NewsManager />
         </div>
       </main >
       <Footer />

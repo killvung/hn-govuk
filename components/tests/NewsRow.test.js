@@ -4,9 +4,10 @@ import NewsRow from '../NewsRow';
 import mockDataNews from './mockDataNews.json';
 
 it('renders correctly', () => {
-    const { descendants, score, time, title, url, id } = mockDataNews;
+    const { descendants, score, time, title, url, id, by } = mockDataNews;
     const tree = renderer
         .create(<NewsRow
+            author={by}
             descendants={descendants}
             score={score}
             timestamp={time}
