@@ -1,11 +1,22 @@
 import React, { useReducer, useEffect } from 'react';
 import NewsRow from '../components/NewsRow';
-import mockDataNews from '../components/tests/mockDataNews.json';
 
-const fetchTopStories = async () => {
-    // TODO: Use fetch to fetch top stories once wire is connected
-    const mockData = await [mockDataNews, mockDataNews, mockDataNews, mockDataNews, mockDataNews];
-    return mockData;
+export const HACKER_NEWS_API_BASE_URL = "https://hacker-news.firebaseio.com/v0/";
+export const TOP_STORIES_URL = "https://hacker-news.firebaseio.com/v0/topstories.json";
+
+export const constructStoryURL = (storyId: string) =>
+    (`${HACKER_NEWS_API_BASE_URL}/item/${storyId}.json`)
+
+export const fetchStory = async (storyId: string) => {
+    const response = await fetch(constructStoryURL(storyId));
+    const story = await response.json();
+    return story;
+}
+
+export const fetchTopStories = async () => {
+    const response = await fetch(TOP_STORIES_URL);
+    const topStories: [] = await response.json();
+    return Promise.all(topStories.map(storyId => fetchStory(storyId)));
 }
 
 const initialState = { stories: [] }

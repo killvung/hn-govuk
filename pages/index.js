@@ -2,12 +2,9 @@ import { useEffect } from 'react'
 import Head from 'next/head'
 
 import Layout from '../components/layout'
-import NewsRow from '../components/NewsRow';
 import NewsManager from '../components/NewsManager'
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
-
-import mockDataNews from '../components/tests/mockDataNews.json';
 
 const TITLE = "?";
 
@@ -18,8 +15,6 @@ export default function Home() {
     const GOVUKFrontend = require('govuk-frontend');
     GOVUKFrontend.initAll();
   });
-
-  const data = [mockDataNews, mockDataNews, mockDataNews, mockDataNews, mockDataNews];
 
   return (
     <Layout>
