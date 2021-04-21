@@ -1,8 +1,3 @@
-/**
-TODO: 
-  Create mock data from HN api
-  constructing the list with ul
-**/
 import { useEffect } from 'react'
 import Head from 'next/head'
 
@@ -10,6 +5,8 @@ import Layout from '../components/layout'
 import NewsRow from '../components/NewsRow';
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
+
+import mockDataNews from '../components/tests/mockDataNews.json';
 
 const TITLE = "?";
 
@@ -21,20 +18,27 @@ export default function Home() {
     GOVUKFrontend.initAll();
   });
 
+  const data = [mockDataNews, mockDataNews, mockDataNews, mockDataNews, mockDataNews];
+
   return (
     <Layout>
       <Head>
         <title>{TITLE}</title>
       </Head>
       <main className={styles.main}>
-        {/* Enable Govuk JS interaction anything below this element */}
         <div className="js-enabled">
           <ul>
-            <li><NewsRow></NewsRow></li>
-            <li><NewsRow></NewsRow></li>
-            <li><NewsRow></NewsRow></li>
-            <li><NewsRow></NewsRow></li>
-            <li><NewsRow></NewsRow></li>
+            {data.map(({ descendants, score, time, title, url }, id) => (
+              <li key={id}>
+                <NewsRow
+                  descendants={descendants}
+                  score={score}
+                  timestamp={time}
+                  title={title}
+                  url={url}
+                />
+              </li>
+            ))}
           </ul>
         </div>
       </main >
