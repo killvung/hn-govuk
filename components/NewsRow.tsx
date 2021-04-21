@@ -2,9 +2,6 @@ import * as React from 'react';
 import { GovUKLink, GovUKNextLink } from './GovUKLink';
 
 interface NewsRowProps {
-    /**
-     * Title, points, author, timestamp, comments
-     */
     title: string
     score: number
     author: string
@@ -28,8 +25,6 @@ const constructSubHeader = (
 )
 const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
     return (
-        // href should be to article link
-        // comment to nextlink to news comment
         <div>
             <GovUKLink href={url}>{title}</GovUKLink>
             {constructSubHeader(score, author, timestamp, descendants, rootId)}

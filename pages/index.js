@@ -1,8 +1,3 @@
-/**
-TODO: 
-  Create static data from HN so you don't need to abuse the api
-  Afterward, constructing the list with ul
-**/
 import { useEffect } from 'react'
 import Head from 'next/head'
 
@@ -11,7 +6,7 @@ import NewsRow from '../components/NewsRow';
 import styles from '../styles/Home.module.css'
 import Footer from '../components/footer'
 
-import mockDataNews from './mockDataNews.json';
+import mockDataNews from '../components/tests/mockDataNews.json';
 
 const TITLE = "?";
 
@@ -34,14 +29,15 @@ export default function Home() {
         <div className="js-enabled">
           <ul>
             {data.map(({ descendants, score, time, title, url }, id) => (
-              <NewsRow
-                id={id}
-                descendants={descendants}
-                score={score}
-                timestamp={time}
-                title={title}
-                url={url}
-              />
+              <li key={id}>
+                <NewsRow
+                  descendants={descendants}
+                  score={score}
+                  timestamp={time}
+                  title={title}
+                  url={url}
+                />
+              </li>
             ))}
           </ul>
         </div>
