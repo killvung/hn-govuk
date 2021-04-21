@@ -10,17 +10,23 @@ interface NewsRowProps {
     author: string
     timestamp: number
     descendants: number
+    url: string
     rootId: string
-    href: string
 }
 
-const constructSubHeader = (score: number, author: string, timestamp: number, descendants: number, rootId: string) => (
+const constructSubHeader = (
+    score: number,
+    author: string,
+    timestamp: number,
+    descendants: number,
+    rootId: string
+) => (
     <div>
         {/* TODO: Construct href and convert timestamp */}
         {score} points by {author} at {timestamp} | <GovUKNextLink href={`/${rootId}`}>{`${descendants} comment`}</GovUKNextLink>
     </div>
 )
-const NewsRow: React.FC<NewsRowProps> = ({ title, score, author, timestamp, descendants, rootId, url }) => {
+const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
     return (
         // href should be to article link
         // comment to nextlink to news comment
