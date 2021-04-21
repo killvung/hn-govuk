@@ -36,6 +36,7 @@ export default function Home() {
                   timestamp={time}
                   title={title}
                   url={url}
+                  rootId={descendants}
                 />
               </li>
             ))}
