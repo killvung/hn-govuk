@@ -33,8 +33,9 @@ const NewsManager: React.FC = () => {
     return (
         <div>
             <ul>
-                {stories.map(({ descendants, score, time, title, url, by }, id) => (
-                    <li key={id}>
+                {/* rootId should be id of the news */}
+                {stories.map(({ id, descendants, score, time, title, url, by }, index) => (
+                    <li key={index}>
                         <NewsRow
                             author={by}
                             descendants={descendants}
@@ -42,7 +43,7 @@ const NewsManager: React.FC = () => {
                             timestamp={time}
                             title={title}
                             url={url}
-                            rootId={descendants}
+                            rootId={id}
                         />
                     </li>
                 ))}
