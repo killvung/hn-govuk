@@ -5,20 +5,28 @@ interface NewsRowProps {
     /**
      * Title, points, author, timestamp, comments
      */
+    title: string
+    score: number
+    author: string
+    timestamp: number
+    descendants: number
+    rootId: string
+    href: string
 }
 
-const constructSubHeader = (point: string, author: string, timestamp: string, href: string, comment: string) => (
+const constructSubHeader = (score: number, author: string, timestamp: number, descendants: number, rootId: string) => (
     <div>
-        {point} points by {author} {timestamp} ago | <GovUKNextLink href={href}>{`${comment} comment`}</GovUKNextLink>
+        {/* TODO: Construct href and convert timestamp */}
+        {score} points by {author} at {timestamp} | <GovUKNextLink href={`/${rootId}`}>{`${descendants} comment`}</GovUKNextLink>
     </div>
 )
-const NewsRow: React.FC<NewsRowProps> = () => {
+const NewsRow: React.FC<NewsRowProps> = ({ title, score, author, timestamp, descendants, rootId, url }) => {
     return (
         // href should be to article link
         // comment to nextlink to news comment
         <div>
-            <GovUKLink href="/">News Row</GovUKLink>
-            {constructSubHeader("420", "author", "timestamp", "/", "420")}
+            <GovUKLink href={url}>{title}</GovUKLink>
+            {constructSubHeader(score, author, timestamp, descendants, rootId)}
         </div>
     )
 }

@@ -7,7 +7,7 @@ interface LinkProps {
 }
 
 /**
- * Wrapper for creating link with GOVUK style
+ * Wrapper for creating external link with GOVUK style
  */
 const GovUKLink: React.FC<LinkProps> = ({ href, children }) => {
     return (
@@ -17,6 +17,9 @@ const GovUKLink: React.FC<LinkProps> = ({ href, children }) => {
     );
 }
 
+/**
+ * Wrapper for creating internal link with GOVUK style
+ */
 const GovUKNextLink: React.FC<LinkProps> = ({ href, children }) => {
     return (
         <Link href={href}>
