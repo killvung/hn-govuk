@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button disable when reaches to the end 1`] = `
+<div>
+  <button
+    className="govuk-button"
+    data-module="govuk-button"
+    disabled={true}
+    onClick={[Function]}
+  >
+    MORE
+  </button>
+</div>
+`;
+
+exports[`Button enabled before reaches to the end 1`] = `
+<div>
+  <button
+    className="govuk-button"
+    data-module="govuk-button"
+    disabled={false}
+    onClick={[Function]}
+  >
+    MORE
+  </button>
+</div>
+`;
+
+exports[`Render successfully 1`] = `
+<div>
+  <button
+    className="govuk-button"
+    data-module="govuk-button"
+    disabled={true}
+    onClick={[Function]}
+  >
+    MORE
+  </button>
+</div>
+`;

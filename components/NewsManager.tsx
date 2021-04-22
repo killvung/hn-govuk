@@ -1,5 +1,9 @@
-import React, { useReducer, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import NewsRow from '../components/NewsRow';
+import PageControl from './PageControl';
+
+const PER_PAGE: number = 30;
+const OFFSET: number = -1;
 
 export const HACKER_NEWS_API_BASE_URL = "https://hacker-news.firebaseio.com/v0/";
 export const TOP_STORIES_URL = "https://hacker-news.firebaseio.com/v0/topstories.json";
@@ -19,32 +23,48 @@ export const fetchTopStories = async () => {
     return Promise.all(topStories.map(storyId => fetchStory(storyId)));
 }
 
-const initialState = { stories: [] }
-
-// TODO: Look at the right type for state and action 
-function reducer(state: any, action: any) {
-    switch (action.type) {
-        case 'TOP_STORIES_SUCCESS':
-            return { ...state, stories: action.payload };
-        default:
-            throw new Error();
-    }
+export const fetchTopStoryIds = async () => {
+    const response = await fetch(TOP_STORIES_URL);
+    return await response.json();
 }
 
 const NewsManager: React.FC = () => {
-    const [state, dispatch] = useReducer(reducer, initialState);
-    useEffect(() => {
-        fetchTopStories().then(data => {
-            dispatch({ type: 'TOP_STORIES_SUCCESS', payload: data });
-        })
-    }, [])
+    const [topStoryIds, setTopStoryIds] = useState([]);
 
-    const stories: [] = state.stories;
+    // Set it to negative one to trigger fetchStories not until offset has been set to 0
+    // After fetching all top stories id
+    const [offset, setOffset] = useState(OFFSET);
+    const [stories, setStories] = useState([]);
+    const [perPage] = useState(PER_PAGE);
+
+    const fetchStories = async () => {
+        const slice = topStoryIds.slice(offset, offset + perPage)
+        return Promise.all(slice.map(storyId => (fetchStory(storyId))))
+    }
+
+    // Capture top story ids then save it to state
+    useEffect(() => {
+        fetchTopStoryIds().then(topStoryIds => {
+            setTopStoryIds(topStoryIds);
+            // Set the offset to 0 trigger fetchStories
+            setOffset(0);
+        })
+    }, []);
+
+    useEffect(() => {
+        // TODO: Look for right type
+        fetchStories().then((newStories: any) => {
+            setStories(stories.concat(newStories));
+        });
+    }, [offset]);
+
+    const handleOnClick = () => {
+        setOffset(offset + perPage);
+    }
 
     return (
         <div>
             <ul>
-                {/* rootId should be id of the news */}
                 {stories.map(({ id, descendants, score, time, title, url, by }, index) => (
                     <li key={index}>
                         <NewsRow
@@ -59,6 +79,7 @@ const NewsManager: React.FC = () => {
                     </li>
                 ))}
             </ul>
+            <PageControl offset={offset} perPage={perPage} totalLength={topStoryIds.length} handleOnClick={handleOnClick} />
         </div>
     )
 }

@@ -26,7 +26,7 @@ const constructSubHeader = (
 const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
     return (
         <div>
-            <GovUKLink href={url}>{title}</GovUKLink>
+            <h2><GovUKLink href={url}>{title}</GovUKLink></h2>
             {constructSubHeader(score, author, timestamp, descendants, rootId)}
         </div>
     )

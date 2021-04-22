@@ -1,5 +1,4 @@
-import { isExportDeclaration } from 'typescript';
-import { fetchTopStories, TOP_STORIES_URL } from '../NewsManager'
+import { fetchTopStories } from '../NewsManager'
 import mockDataTopStories from './mockDataTopStories.json';
 import mockDataNews from './mockDataNews.json';
 
@@ -23,8 +22,4 @@ test('fetch data successfully', async () => {
         )
     const data = await fetchTopStories();
     expect(data).toEqual([mockDataNews]);
-});
-
-test('fetch data failed', () => {
-
 });
