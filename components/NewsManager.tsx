@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NewsRow from '../components/NewsRow';
 import PageControl from './PageControl';
 
-const PER_PAGE: number = 30;
+const PER_PAGE: number = 25;
 const OFFSET: number = -1;
 
 export const HACKER_NEWS_API_BASE_URL = "https://hacker-news.firebaseio.com/v0/";
@@ -38,7 +38,7 @@ const NewsManager: React.FC = () => {
     const [perPage] = useState(PER_PAGE);
 
     const fetchStories = async () => {
-        const slice = topStoryIds.slice(offset, offset + perPage)
+        const slice = topStoryIds.slice(offset * perPage, offset * perPage + perPage)
         return Promise.all(slice.map(storyId => (fetchStory(storyId))))
     }
 
@@ -59,7 +59,7 @@ const NewsManager: React.FC = () => {
     }, [offset]);
 
     const handleOnClick = () => {
-        setOffset(offset + perPage);
+        setOffset(offset + 1);
     }
 
     return (
