@@ -11,7 +11,9 @@ interface PageControlProps {
 
 const PageControl: React.FC<PageControlProps> = ({ offset, perPage, totalLength, handleOnClick }) => {
     const isEnd = () => (offset * perPage + perPage > totalLength)
-    const onClick = () => {
+    // TODO: type
+    const onClick = (event: any) => {
+        event.target.blur();
         handleOnClick()
     }
 

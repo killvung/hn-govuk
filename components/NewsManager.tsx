@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NewsRow from '../components/NewsRow';
 import PageControl from './PageControl';
 
-const PER_PAGE: number = 25;
+const PER_PAGE: number = 10;
 const OFFSET: number = -1;
 
 export const HACKER_NEWS_API_BASE_URL = "https://hacker-news.firebaseio.com/v0/";

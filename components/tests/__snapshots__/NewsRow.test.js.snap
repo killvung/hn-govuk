@@ -16,15 +16,18 @@ exports[`NewsRow - renders correctly 1`] = `
     evo_9
      at 
     1618955017
-     | 
-    <a
-      className="govuk-link govuk-link--no-visited-state"
-      href="/26882185"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-    >
-      62 comment
-    </a>
+     
+    <span>
+       | 
+      <a
+        className="govuk-link govuk-link--no-visited-state"
+        href="/comment/26882185"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        62 comment
+      </a>
+    </span>
   </div>
 </div>
 `;
