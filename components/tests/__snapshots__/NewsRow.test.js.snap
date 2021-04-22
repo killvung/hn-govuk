@@ -1,16 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `
+exports[`NewsRow - renders correctly 1`] = `
 <div>
-  <a
-    className="govuk-link govuk-link--no-visited-state"
-    href="https://github.com/dotnet/maui"
-  >
-    .NET MAUI: .NET Multi-Platform App UI
-  </a>
+  <h2>
+    <a
+      className="govuk-link govuk-link--no-visited-state"
+      href="https://github.com/dotnet/maui"
+    >
+      .NET MAUI: .NET Multi-Platform App UI
+    </a>
+  </h2>
   <div>
     129
      points by 
+    evo_9
      at 
     1618955017
      | 
