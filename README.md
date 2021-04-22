@@ -5,6 +5,10 @@ Secret
 TODO:
 - Fix Ask HN Link
 - Fix comments count
+- Comment page
+  - https://design-system.service.gov.uk/components/details/
+  - Display author, date direct response 
+  - Display comment (author, date direct...)
 - Use Date for timestamp
 - Use number instead of bullet point for li
 - Top bar for layout
