@@ -64,7 +64,7 @@ const NewsManager: React.FC = () => {
 
     return (
         <div>
-            <ul>
+            <ol>
                 {stories.map(({ id, descendants, score, time, title, url, by }, index) => (
                     <li key={index}>
                         <NewsRow
@@ -78,7 +78,7 @@ const NewsManager: React.FC = () => {
                         />
                     </li>
                 ))}
-            </ul>
+            </ol>
             <PageControl offset={offset} perPage={perPage} totalLength={topStoryIds.length} handleOnClick={handleOnClick} />
         </div>
     )
