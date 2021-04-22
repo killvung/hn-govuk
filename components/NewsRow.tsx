@@ -13,12 +13,18 @@ interface NewsRowProps {
 
 
 const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
-    const constructSubHeader = () => (
-        <div>
+    const constructSubHeader = () => {
+        const constructComment = () => {
+            if (!descendants) {
+                return <span></span>
+            } return <span>| <GovUKNextLink href={`/comment/${rootId}`}>{`${descendants} comment`}</GovUKNextLink></span>
+        }
+        return <div>
             {/* TODO: Construct href and convert timestamp */}
-            {score} points by {author} at {timestamp} | <GovUKNextLink href={`/comment/${rootId}`}>{`${descendants} comment`}</GovUKNextLink>
+            {score} points by {author} at {timestamp} {constructComment()}
         </div >
-    )
+    }
+
     const constructTitle = () => {
         if (title.includes("Ask HN:")) {
             return <h2><GovUKNextLink href={`/comment/${rootId}`}>{title}</GovUKNextLink></h2>
