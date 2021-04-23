@@ -1,45 +1,28 @@
 import React, { useState, useEffect } from 'react';
+
 import StoryRow from './StoryRow';
 import FetchMoreButton from './FetchMoreButton';
+import fetchPost from '../../utils/fetchPost';
 
-const PER_PAGE: number = 25;
-const OFFSET: number = -1;
-
-export const HACKER_NEWS_API_BASE_URL = "https://hacker-news.firebaseio.com/v0/";
-export const TOP_STORIES_URL = "https://hacker-news.firebaseio.com/v0/topstories.json";
-
-export const constructStoryURL = (storyId: string) =>
-    (`${HACKER_NEWS_API_BASE_URL}/item/${storyId}.json`)
-
-export const fetchStory = async (storyId: string) => {
-    const response = await fetch(constructStoryURL(storyId));
-    const story = await response.json();
-    return story;
-}
-
-export const fetchTopStories = async () => {
-    const response = await fetch(TOP_STORIES_URL);
-    const topStories: [] = await response.json();
-    return Promise.all(topStories.map(storyId => fetchStory(storyId)));
-}
-
+const TOP_STORIES_URL = "https://hacker-news.firebaseio.com/v0/topstories.json";
 export const fetchTopStoryIds = async () => {
     const response = await fetch(TOP_STORIES_URL);
     return await response.json();
 }
 
+const PER_PAGE: number = 25;
+// Set offset to negative one to avoid fetching story in the beginning 
+const OFFSET: number = -1;
 const StoryContainer: React.FC = () => {
     const [topStoryIds, setTopStoryIds] = useState([]);
 
-    // Set it to negative one to trigger fetchStories not until offset has been set to 0
-    // After fetching all top stories id
     const [offset, setOffset] = useState(OFFSET);
-    const [stories, setStories] = useState([]);
     const [perPage] = useState(PER_PAGE);
+    const [stories, setStories] = useState([]);
 
-    const fetchStories = async () => {
+    const fetchStories = async (): Promise<any> => {
         const slice = topStoryIds.slice(offset * perPage, offset * perPage + perPage)
-        return Promise.all(slice.map(storyId => (fetchStory(storyId))))
+        return Promise.all(slice.map(async (storyId) => fetchPost(storyId)));
     }
 
     // Capture top story ids then save it to state
@@ -53,8 +36,11 @@ const StoryContainer: React.FC = () => {
 
     useEffect(() => {
         // TODO: Look for right type
-        fetchStories().then((newStories: any) => {
-            setStories(stories.concat(newStories));
+        fetchStories().then((incomingStories: []) => {
+            setStories([
+                ...stories,
+                ...incomingStories
+            ]);
         });
     }, [offset]);
 
