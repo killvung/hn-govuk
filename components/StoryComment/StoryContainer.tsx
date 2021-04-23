@@ -4,21 +4,31 @@ import Story from './Story';
 import fetchPost from '../../utils/fetchPost';
 
 const StoryContainer: React.FC = () => {
-    const [story, setStory] = useState();
+    // TODO: Change type
+    const [story, setStory] = useState<any>();
     const router = useRouter();
 
     useEffect(() => {
-        const id = router.query.storyId as string;
-
-        fetchPost(id).then((data: any) => {
-            setStory(data);
-        })
-    });
+        const storyId = router.query.storyId as string;
+        if (storyId) {
+            fetchPost(storyId).then((data: any) => {
+                const { by, descendants, id, kids, score, time, title, url } = data;
+                setStory({
+                    title,
+                    score,
+                    author: by,
+                    timestamp: time,
+                    descendants,
+                    url,
+                    rootId: id,
+                    kids
+                });
+            })
+        }
+    }, [router.query.storyId]);
 
     return (
-        <Story {...story}>
-
-        </Story>
+        <Story {...story} />
     );
 }
 

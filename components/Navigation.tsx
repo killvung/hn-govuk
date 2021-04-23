@@ -12,7 +12,7 @@ const Navigation: React.FC = ({ children }) => {
             <nav className={`${styles['app-navigation']} govuk-clearfix`}>
                 <ul className={`${styles['app-navigation__list']} ${styles['app-width-container']}`}>
                     <li className={styles['app-navigation__list-item']}>
-                        <GovUKNextLink href="#">{NAV_TOP}</GovUKNextLink>
+                        <GovUKNextLink href="/">{NAV_TOP}</GovUKNextLink>
                     </li>
                     <li className={styles['app-navigation__list-item']}>
                         <GovUKNextLink href="#">{NAV_JOB}</GovUKNextLink>

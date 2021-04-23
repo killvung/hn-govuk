@@ -5,5 +5,6 @@ export interface StoryProps {
     timestamp: number
     descendants: number
     url: string
-    rootId: string
+    rootId: string;
+    kids: [] | undefined
 }
