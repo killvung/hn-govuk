@@ -7,8 +7,7 @@ TODO:
   - https://design-system.service.gov.uk/components/details/
   - Display author, date direct response 
   - Display comment (author, date direct...)
-- Top bar for layout
-  - Negvation for Top, Show and Ask
+- Top bar nav (top, ask, job)
 
 ## Getting Started
 
