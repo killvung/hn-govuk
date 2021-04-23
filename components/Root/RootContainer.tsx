@@ -13,7 +13,7 @@ export const fetchTopStoryIds = async () => {
 const PER_PAGE: number = 25;
 // Set offset to negative one to avoid fetching story in the beginning 
 const OFFSET: number = -1;
-const StoryContainer: React.FC = () => {
+const RootContainer: React.FC = () => {
     const [topStoryIds, setTopStoryIds] = useState([]);
 
     const [offset, setOffset] = useState(OFFSET);
@@ -70,4 +70,4 @@ const StoryContainer: React.FC = () => {
     )
 }
 
-export default StoryContainer;
+export default RootContainer;
