@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import StoryRow from '../StoryRow';
-import mockDataStory from './mockDataStory.json';
+import mockDataStory from '../../../utils/test/mockDataStory.json';
 
-test('NewsRow - renders correctly', () => {
+test('StoryRow - renders correctly', () => {
     const { descendants, score, time, title, url, id, by } = mockDataStory;
     const tree = renderer
         .create(

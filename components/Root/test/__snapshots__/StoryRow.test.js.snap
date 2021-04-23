@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewsRow - renders correctly 1`] = `
+exports[`StoryRow - renders correctly 1`] = `
 <div>
   <h2>
     <a
