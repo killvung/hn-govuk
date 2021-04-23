@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { GovUKLink, GovUKNextLink } from './GovUKLink';
+import { GovUKLink, GovUKNextLink } from '../GovUKLink';
 
 interface StoryRowProps {
     title: string
@@ -10,7 +10,6 @@ interface StoryRowProps {
     url: string
     rootId: string
 }
-
 
 const StoryRow: React.FC<StoryRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
     const constructTitle = () => {

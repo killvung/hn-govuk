@@ -28,7 +28,7 @@ export const fetchTopStoryIds = async () => {
     return await response.json();
 }
 
-const StoryManager: React.FC = () => {
+const StoryContainer: React.FC = () => {
     const [topStoryIds, setTopStoryIds] = useState([]);
 
     // Set it to negative one to trigger fetchStories not until offset has been set to 0
@@ -84,4 +84,4 @@ const StoryManager: React.FC = () => {
     )
 }
 
-export default StoryManager;
+export default StoryContainer;

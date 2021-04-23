@@ -1,4 +1,4 @@
-import { fetchTopStories } from '../StoryManager'
+import { fetchTopStories } from '../StoryContainer'
 import mockDataTopStories from './mockDataTopStories.json';
 import mockDataStory from './mockDataStory.json';
 
