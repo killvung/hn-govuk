@@ -1,6 +1,6 @@
-import { fetchTopStories } from '../NewsManager'
+import { fetchTopStories } from '../StoryManager'
 import mockDataTopStories from './mockDataTopStories.json';
-import mockDataNews from './mockDataNews.json';
+import mockDataStory from './mockDataStory.json';
 
 global.fetch = jest.fn();
 
@@ -17,9 +17,9 @@ test('fetch data successfully', async () => {
         )
         .mockReturnValueOnce(
             Promise.resolve({
-                json: () => Promise.resolve(mockDataNews),
+                json: () => Promise.resolve(mockDataStory),
             })
         )
     const data = await fetchTopStories();
-    expect(data).toEqual([mockDataNews]);
+    expect(data).toEqual([mockDataStory]);
 });

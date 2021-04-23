@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NewsRow from '../components/NewsRow';
+import StoryRow from './StoryRow';
 import PageControl from './PageControl';
 
 const PER_PAGE: number = 25;
@@ -28,7 +28,7 @@ export const fetchTopStoryIds = async () => {
     return await response.json();
 }
 
-const NewsManager: React.FC = () => {
+const StoryManager: React.FC = () => {
     const [topStoryIds, setTopStoryIds] = useState([]);
 
     // Set it to negative one to trigger fetchStories not until offset has been set to 0
@@ -67,7 +67,7 @@ const NewsManager: React.FC = () => {
             <ol>
                 {stories.map(({ id, descendants, score, time, title, url, by }, index) => (
                     <li key={index}>
-                        <NewsRow
+                        <StoryRow
                             author={by}
                             descendants={descendants}
                             score={score}
@@ -84,4 +84,4 @@ const NewsManager: React.FC = () => {
     )
 }
 
-export default NewsManager;
+export default StoryManager;

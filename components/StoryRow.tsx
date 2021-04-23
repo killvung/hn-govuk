@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { GovUKLink, GovUKNextLink } from './GovUKLink';
 
-interface NewsRowProps {
+interface StoryRowProps {
     title: string
     score: number
     author: string
@@ -12,7 +12,7 @@ interface NewsRowProps {
 }
 
 
-const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
+const StoryRow: React.FC<StoryRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
     const constructTitle = () => {
         if (title.includes("Ask HN:")) {
             return <h2><GovUKNextLink href={`/${rootId}`}>{title}</GovUKNextLink></h2>
@@ -46,4 +46,4 @@ const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp,
     )
 }
 
-export default NewsRow;
+export default StoryRow;

@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import NewsManager from '../components/NewsManager'
+import StoryManager from '../components/StoryManager'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
         <Layout>
             <main className={styles.main}>
                 <div className="js-enabled">
-                    <NewsManager />
+                    <StoryManager />
                 </div>
             </main >
         </Layout>
