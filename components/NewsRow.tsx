@@ -15,7 +15,7 @@ interface NewsRowProps {
 const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
     const constructTitle = () => {
         if (title.includes("Ask HN:")) {
-            return <h2><GovUKNextLink href={`/comment/${rootId}`}>{title}</GovUKNextLink></h2>
+            return <h2><GovUKNextLink href={`/${rootId}`}>{title}</GovUKNextLink></h2>
         }
         return <h2><GovUKLink href={url}>{title}</GovUKLink></h2>
     };
@@ -24,7 +24,7 @@ const NewsRow: React.FC<NewsRowProps> = ({ title, url, score, author, timestamp,
         const constructComment = () => {
             if (!descendants) {
                 return <span></span>
-            } return <span> | <GovUKNextLink href={`/comment/${rootId}`}>{`${descendants} comment`}</GovUKNextLink></span>
+            } return <span> | <GovUKNextLink href={`/${rootId}`}>{`${descendants} comment`}</GovUKNextLink></span>
         }
         const constructDate = () => {
             const date = new Date(timestamp * 1000).toLocaleString('en-GB');

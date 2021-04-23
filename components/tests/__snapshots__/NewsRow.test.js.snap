@@ -15,13 +15,15 @@ exports[`NewsRow - renders correctly 1`] = `
      points by 
     evo_9
      at 
-    1618955017
+    <span>
+      20/04/2021, 16:43:37
+    </span>
      
     <span>
        | 
       <a
         className="govuk-link govuk-link--no-visited-state"
-        href="/comment/26882185"
+        href="/26882185"
         onClick={[Function]}
         onMouseEnter={[Function]}
       >
