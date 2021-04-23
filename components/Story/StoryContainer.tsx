@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import StoryRow from './StoryRow';
-import PageControl from './PageControl';
+import FetchMoreButton from './FetchMoreButton';
 
 const PER_PAGE: number = 25;
 const OFFSET: number = -1;
@@ -79,7 +79,7 @@ const StoryContainer: React.FC = () => {
                     </li>
                 ))}
             </ol>
-            <PageControl offset={offset} perPage={perPage} totalLength={topStoryIds.length} handleOnClick={handleOnClick} />
+            <FetchMoreButton offset={offset} perPage={perPage} totalLength={topStoryIds.length} handleOnClick={handleOnClick} />
         </div>
     )
 }

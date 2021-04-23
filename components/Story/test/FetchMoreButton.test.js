@@ -1,22 +1,23 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import PageControl from '../PageControl';
+import FetchMoreButton from '../FetchMoreButton';
 
 test('Render successfully', () => {
     const tree = renderer
-        .create(<PageControl
-            offset={0}
-            perPage={0}
-            totalLength={0}
-            handleOnClick={0}
-        />)
+        .create(
+            <FetchMoreButton
+                offset={0}
+                perPage={0}
+                totalLength={0}
+                handleOnClick={0}
+            />)
         .toJSON();
     expect(tree).toMatchSnapshot();
 })
 
 test('Button enabled before reaches to the end', () => {
     const tree = renderer
-        .create(<PageControl
+        .create(<FetchMoreButton
             offset={0}
             perPage={10}
             totalLength={20}
@@ -28,7 +29,7 @@ test('Button enabled before reaches to the end', () => {
 
 test('Button disable when reaches to the end', () => {
     const tree = renderer
-        .create(<PageControl
+        .create(<FetchMoreButton
             offset={1}
             perPage={10}
             totalLength={10}
