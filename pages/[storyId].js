@@ -1,12 +1,15 @@
 import Layout from '../components/layout'
-import { useRouter } from 'next/router'
-
 import CommentContainer from '../components/Comment/CommentContainer'
 import styles from '../styles/Home.module.css'
 
-export default function Comment() {
-    const router = useRouter()
-    const { storyId } = router.query
+export async function getServerSideProps(context) {
+    const storyId = context.params.storyId
+    return {
+        props: { storyId }
+    }
+}
+
+export default function Comment({ storyId }) {
     return (
         <Layout>
             <main className={styles.main}>
