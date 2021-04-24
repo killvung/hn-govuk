@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { GovUKLink, GovUKNextLink } from '../GovUKLink';
 import { StoryRowProps } from '../../models/props';
+import { buildLocaleDate } from '../../utils/dates';
 
 const StoryRow: React.FC<StoryRowProps> = ({ title, url, score, author, timestamp, descendants, rootId }) => {
     const constructTitle = () => {
@@ -11,23 +12,20 @@ const StoryRow: React.FC<StoryRowProps> = ({ title, url, score, author, timestam
     };
 
     const constructSubHeader = () => {
-        const constructComment = () => {
+        const constructCommentLink = () => {
             if (!descendants) {
                 return <span></span>
             } return <span> | <GovUKNextLink href={`/${rootId}`}>{`${descendants} comment`}</GovUKNextLink></span>
         }
-        const constructDate = () => {
-            const date = new Date(timestamp * 1000).toLocaleString('en-GB');
-            return <span>{date}</span>
-        }
+
         return (
             <div>
-                {score} points by {author} at {constructDate()} {constructComment()}
+                {score} points by {author} at {<span>{buildLocaleDate(timestamp)}</span>}
+                {constructCommentLink()}
             </div >
         )
     }
-
-
+    
     return (
         <div>
             {constructTitle()}

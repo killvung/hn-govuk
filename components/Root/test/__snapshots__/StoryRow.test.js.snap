@@ -18,7 +18,6 @@ exports[`StoryRow - renders correctly 1`] = `
     <span>
       20/04/2021, 16:43:37
     </span>
-     
     <span>
        | 
       <a
