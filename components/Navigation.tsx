@@ -15,10 +15,10 @@ const Navigation: React.FC = ({ children }) => {
                         <GovUKNextLink href="/">{NAV_TOP}</GovUKNextLink>
                     </li>
                     <li className={styles['app-navigation__list-item']}>
-                        <GovUKNextLink href="#">{NAV_JOB}</GovUKNextLink>
+                        <GovUKNextLink href="/job">{NAV_JOB}</GovUKNextLink>
                     </li>
                     <li className={styles['app-navigation__list-item']}>
-                        <GovUKNextLink href="#">{NAV_ASK}</GovUKNextLink>
+                        <GovUKNextLink href="/ask">{NAV_ASK}</GovUKNextLink>
                     </li>
                 </ul>
             </nav>

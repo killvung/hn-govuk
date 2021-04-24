@@ -1,4 +1,4 @@
-export interface StoryProps {
+export interface StoryRowProps {
     title: string
     score: number
     author: string
@@ -6,5 +6,8 @@ export interface StoryProps {
     descendants: number
     url: string
     rootId: string;
+}
+
+export interface StoryProps extends StoryRowProps {
     kids: [] | undefined
 }
