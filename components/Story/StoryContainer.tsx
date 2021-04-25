@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'
 import Story from './Story';
+import { storyDataToStoryProps } from '../../models/mapper'
+
 import fetchPost from '../../utils/fetchPost';
 
 const StoryContainer: React.FC = () => {
@@ -12,17 +14,7 @@ const StoryContainer: React.FC = () => {
         const storyId = router.query.storyId as string;
         if (storyId) {
             fetchPost(storyId).then((data: any) => {
-                const { by, descendants, id, kids, score, time, title, url } = data;
-                setStory({
-                    title,
-                    score,
-                    author: by,
-                    timestamp: time,
-                    descendants,
-                    url,
-                    rootId: id,
-                    kids
-                });
+                setStory(storyDataToStoryProps(data));
             })
         }
     }, [router.query.storyId]);

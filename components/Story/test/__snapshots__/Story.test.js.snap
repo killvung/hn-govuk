@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Story - Title, points, author, date, comment count existed 1`] = `
+<div>
+  <div>
+    Story Placeholder
+     
+     
+     
+     
+     
+     
+  </div>
+  <div />
+</div>
+`;

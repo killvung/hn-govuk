@@ -1,6 +1,11 @@
 import React from 'react';
 import Story from '../Story';
 
-test('Story - Title, points, author, date, comment countexisted', () => {
+import ShallowRenderer from 'react-test-renderer/shallow';
 
+test('Story - Title, points, author, date, comment count existed', () => {
+    const renderer = new ShallowRenderer();
+    renderer.render(<Story />);
+    const result = renderer.getRenderOutput();
+    expect(result).toMatchSnapshot();
 });
