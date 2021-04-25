@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Navigation.module.css';
-import { GovUKNextLink } from '../components/GovUKLink';
+import { GovUKNextLink } from './GovUKLink';
 
 const NAV_TOP = "TOP";
 const NAV_ASK = "ASK";
