@@ -2,15 +2,12 @@
 
 exports[`Story - Title, points, author, date, comment count existed 1`] = `
 <div>
-  <div>
-    Story Placeholder
-     
-     
-     
-     
-     
-     
-  </div>
-  <div />
+  Story Placeholder
+   
+   
+   
+   
+   
+   
 </div>
 `;
