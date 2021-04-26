@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comment - when toggle is false (off), comment section collasped, label changes to expand 1`] = `
+<summary
+  className="govuk-details__summary"
+>
+  <span
+    className="govuk-details__summary-text"
+  />
+</summary>
+`;
+
+exports[`Comment - when toggle is true (on), comment section expanded, label changes to collasp 1`] = `
+<summary
+  className="govuk-details__summary"
+>
+  <span
+    className="govuk-details__summary-text"
+  />
+</summary>
+`;

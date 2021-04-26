@@ -5,7 +5,7 @@ export interface StoryRowProps {
     timestamp: number
     descendants: number
     url: string
-    rootId: string;
+    rootId: string
 }
 
 export interface StoryProps extends StoryRowProps {
@@ -13,13 +13,14 @@ export interface StoryProps extends StoryRowProps {
 }
 
 export interface CommentContainerProps {
-    commentId: string
+    commentId: string;
 }
 
 // Both story and comment shoud not be relied on StoryRowProps in the beginning
 export interface CommentProps {
     author: string
-    timestamp: string
+    timestamp: number
     comment: string
+    parentId: string
     children: []
 }

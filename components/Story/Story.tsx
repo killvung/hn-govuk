@@ -7,10 +7,10 @@ const Story: React.FC<StoryProps> = ({ title, url, score, author, timestamp, des
     return (
         <div>
             {/* Story */}
-            <div>
-                Story Placeholder
-                {title} {url} {score} {author} {timestamp} {descendants} {rootId}
-            </div>
+            <h2>{title}</h2>
+            {url}
+            {score} {author} {timestamp} {descendants} {rootId}
+            <hr/>
             {/* Comment */}
             <div>
                 {kids?.map((kidId, id) => (
