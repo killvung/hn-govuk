@@ -2,12 +2,6 @@
 
 Secret
 
-TODO:
-- Comment page
-  - https://design-system.service.gov.uk/components/details/
-  - Display author, date direct response 
-  - Display comment (author, date direct...)
-
 ## Getting Started
 
 First, run the development server:
