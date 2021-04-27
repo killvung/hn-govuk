@@ -19,6 +19,9 @@ const StoryContainer: React.FC = () => {
         }
     }, [router.query.storyId]);
 
+    if (!story) {
+        return <span />
+    }
     return (
         <Story {...story} />
     );
