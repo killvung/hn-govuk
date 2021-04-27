@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import '../styles/globals.css'
 import "govuk-frontend/govuk/all.scss";
 
-const TITLE = "?";
+const TITLE = "Hacker News but built with GovUK design system"
 
 function MyApp({ Component, pageProps }) {
   // By default NextJS performs server rednering thus initAll() would have error since document is not existed yet
