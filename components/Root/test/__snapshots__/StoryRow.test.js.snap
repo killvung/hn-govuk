@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StoryRow - renders correctly 1`] = `
+<div>
+  <h2>
+    <a
+      className="govuk-link govuk-link--no-visited-state"
+      href="https://github.com/dotnet/maui"
+    >
+      .NET MAUI: .NET Multi-Platform App UI
+    </a>
+  </h2>
+  <div>
+    129
+     points by 
+    evo_9
+     at 
+    <span>
+      20/04/2021, 16:43:37
+    </span>
+    <span>
+       | 
+      <a
+        className="govuk-link govuk-link--no-visited-state"
+        href="/26882185"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        62 comment
+      </a>
+    </span>
+  </div>
+</div>
+`;

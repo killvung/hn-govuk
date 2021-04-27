@@ -1,0 +1,27 @@
+.app-navigation__list-item {
+    height: 50px;
+    padding: 0 15px;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.app-navigation__list-item a{
+    text-decoration: none;
+}
+
+.app-navigation__list {
+    position: relative;
+    margin: 0;
+    list-style: none;
+}
+
+.app-navigation {
+    font-weight: 700;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #f8f8f8;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+    display: block;
+    text-align: center;
+}

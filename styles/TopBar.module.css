@@ -1,0 +1,27 @@
+.app-navigation {
+    text-align: left;
+    font-size: 1.1875rem;
+    background: #ffffff;
+    border-bottom: 0.5px solid #ccc;
+}
+
+.app-navigation__list {
+    position: relative;
+    list-style: none;
+}
+
+.app-navigation__list-item {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+}
+
+.app-navigation-top {
+    float: left;
+    padding-left: 1em;
+}
+
+.app-navigation-top span {
+    font-size: 20px;
+}
