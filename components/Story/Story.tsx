@@ -15,7 +15,7 @@ const Story: React.FC<StoryProps> = ({ title, url, score, author, timestamp, des
     return (
         <div>
             <h2>{title}</h2>
-            <a href={url}>{buildUrlText(url)}</a>
+            {url && <a href={url}>{buildUrlText(url)}</a>}
             <p>{`${score} points | ${author} | ${buildLocaleDate(timestamp)}`}</p>
             <hr />
             <div>
