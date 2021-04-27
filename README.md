@@ -4,7 +4,7 @@ A Hacker News clone built with the UI library used for any UK government website
 
 GOV.UK Design System provides a set of guidelines (Design Pattern, UI components, Styles) to ensure related services are staying consistent with GOV.UK.
 
-Though this site is not related to them in any given points, the motivation behind adopting the system is due to my appreciation for its practical user experiences.
+Though this site is not related to them in any given points, the motivation behind the adoption is due to my appreciation for its practical user experiences.
 
 ## Demo 
 [Click here (Vercel)](https://hn-govuk.vercel.app)
