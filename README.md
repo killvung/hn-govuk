@@ -11,7 +11,7 @@ Though this site is not related to them in any given points, the motivation behi
 
 ## Tech highlights
 - [Next.js](https://nextjs.org/) (An awesome React framework for rapidly creating React applications without headaches)
-- [Hacker News API](https://github.com/HackerNews/API)(Hacker News provides an API for fetching their data)
+- [Hacker News API] (https://github.com/HackerNews/API)(Hacker News provides an API for fetching their data)
 - React Hook
 - [GOV.UK Design System](https://design-system.service.gov.uk/)
 
