@@ -17,6 +17,9 @@ Though this site is not related to them in any given points, the motivation behi
 
 ## Screenshots
 
+## Issues
+[A lot](https://github.com/killvung/hn-govuk/issues)
+
 ## Getting Started
 
 First, run the development server:
