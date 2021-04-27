@@ -3,15 +3,24 @@ import React from 'react';
 import { StoryProps } from '../../models/props';
 import CommentContainer from '../Comment/CommentContainer';
 
-const Story: React.FC<StoryProps> = ({ title, url, score, author, timestamp, descendants, rootId, kids }) => {
+import { buildLocaleDate } from '../../utils/dates';
+
+const URL_TEXT_LENGTH_LIMIT = 75;
+// Refactor this to util if more than one component is using it
+const buildUrlText = (href: string) => {
+    return href.length > URL_TEXT_LENGTH_LIMIT ? href.slice(0, URL_TEXT_LENGTH_LIMIT) + "..." : href;
+}
+
+const Story: React.FC<StoryProps> = ({ title, url, score, author, timestamp, descendants, kids }) => {
     return (
         <div>
-            {/* Story */}
             <h2>{title}</h2>
-            {url}
-            {score} {author} {timestamp} {descendants} {rootId}
-            <hr/>
-            {/* Comment */}
+            <a href={url}>{buildUrlText(url)}</a>
+            <p>{`${score} points | ${author} | ${buildLocaleDate(timestamp)}`}</p>
+            <hr />
+            <div>
+                {`${descendants} comments`}
+            </div>
             <div>
                 {kids?.map((kidId, id) => (
                     <CommentContainer key={id} commentId={kidId} />
