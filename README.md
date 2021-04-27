@@ -9,6 +9,14 @@ Though this site is not related to them in any given points, the motivation behi
 ## Demo 
 [Click here (Vercel)](https://hn-govuk.vercel.app)
 
+## Tech highlights
+- [Next.js](https://nextjs.org/) (An awesome React framework for rapidly creating React applications without headaches)
+- Hacker News API (Hacker News provides an API for fetching their data)
+- React Hook
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+
+## Screenshots
+
 ## Getting Started
 
 First, run the development server:
