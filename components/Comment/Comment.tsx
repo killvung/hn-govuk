@@ -12,7 +12,7 @@ const Comment: React.FC<CommentProps> = ({ author, timestamp, comment, parentId,
         <div>
             <details open className="govuk-details" data-module="govuk-details">
                 <CommentSummaryButton />
-                <div className="govuk-details__text">
+                <div className={`govuk-details__text ${styles['Comment__comment-text']}`}>
                     <div>
                         <div><b>{author}</b><small className={styles['Comment__local-date']}>{buildLocaleDate(timestamp)}</small></div>
                         <br />

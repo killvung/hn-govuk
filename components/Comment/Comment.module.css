@@ -5,3 +5,7 @@
 .Comment__comment-section {
     list-style: none;
 }
+
+.Comment__comment-text {
+    min-width: 113%;
+}
