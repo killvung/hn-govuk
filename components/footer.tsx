@@ -3,19 +3,20 @@ import React from "react";
 const AUTHOR = "killvung";
 
 const Footer: React.FC = () => (
-    <div>
-        <footer className="govuk-footer " role="contentinfo">
-            <div className="govuk-width-container ">
-                <div className="govuk-footer__meta">
-                    <div className="govuk-footer__meta-item">
-                        <a className="govuk-footer__link" href="https://design-system.service.gov.uk/" rel="license">GOV.UK Design System</a>
-                        <br />
-                        {AUTHOR} <a className="govuk-footer__link" href="https://www.gnu.org/licenses/copyleft.en.html/">(ɔ) 2021</a>
-                    </div>
+    <footer className="govuk-footer " role="contentinfo">
+        <div className="govuk-width-container ">
+            <div className="govuk-footer__meta">
+                <div className="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                    I don't know whether UK Open Government Loicence is applied in US, please let me know.
+                    <br />
+                    <a className="govuk-footer__link" href="https://github.com/killvung/hn-govuk" rel="license">Source code</a>
+                </div>
+                <div className="govuk-footer__meta-item">
+                    By: {AUTHOR}
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 )
 
 export default Footer;
