@@ -1,8 +1,8 @@
 # Hacker News but built with GOV.UK Design System
 
-A Hacker News clone built with the UI library used for any UK government websites
+A Hacker News clone built with the UI library used for any UK government websites.
 
-GOV.UK Design System provides a set of guidelines (Design Pattern, UI components, Styles) to ensure related services are staying consistent with GOV.UK
+GOV.UK Design System provides a set of guidelines (Design Pattern, UI components, Styles) to ensure related services are staying consistent with GOV.UK.
 
 Though this site is not related to them in any given points, the motivation behind adopting the system is due to my appreciation for its practical user experiences.
 
