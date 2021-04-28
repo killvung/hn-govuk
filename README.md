@@ -1,10 +1,8 @@
-# Hacker News but built with GOV.UK Design System
+# Hacker News But Built With GOV.UK Design System
 
-A Hacker News clone built with the UI library used for [UK government website](https://www.gov.uk/)
+A Hacker News clone built with the UI library used for [UK government website](https://www.gov.uk/). 
 
-GOV.UK Design System provides a set of guidelines (Design Pattern, UI components, Styles) to ensure related services are staying consistent with GOV.UK.
-
-Though this site is not related to them in any given points, the motivation behind the adoption is due to my long time appreciation for its practical user experiences.
+The system provides sets of guidelines and principles to ensure their services are staying consistent with GOV.UK. Though my site is not related to them in any given points, the motivation behind the adoption is due to my long time appreciation for its practical user experiences, therefore I want to use their ui components and styles to implement the application just for the sake of experience.
 
 ## Demo 
 [Click here (Vercel)](https://hn-govuk.vercel.app)
@@ -16,9 +14,20 @@ Though this site is not related to them in any given points, the motivation behi
 - [GOV.UK Design System](https://design-system.service.gov.uk/)
 
 ## Screenshots
+### Main page (Desktop)
+![Main-Desktop](https://github.com/killvung/hn-govuk/blob/dev/screenshots/root-desktop.png)
+
+### Main page (Mobile)
+![Main-Mobile](https://github.com/killvung/hn-govuk/blob/dev/screenshots/root-mobile.png)
+
+### Story Page (Desktop)
+![Story-Desktop](https://github.com/killvung/hn-govuk/blob/dev/screenshots/story-desktop.png)
+
+### Story Page (Mobile)
+![Story-Mobile](https://github.com/killvung/hn-govuk/blob/dev/screenshots/story-mobile.png)
 
 ## Issues
-[A lot](https://github.com/killvung/hn-govuk/issues)
+Still a lot to fix, feel free to [submit](https://github.com/killvung/hn-govuk/issues) them
 
 ## Getting Started
 
