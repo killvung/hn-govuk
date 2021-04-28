@@ -1,6 +1,24 @@
-# HN
+# Hacker News but built with GOV.UK Design System
 
-Secret
+A Hacker News clone built with the UI library used for [UK government website](https://www.gov.uk/)
+
+GOV.UK Design System provides a set of guidelines (Design Pattern, UI components, Styles) to ensure related services are staying consistent with GOV.UK.
+
+Though this site is not related to them in any given points, the motivation behind the adoption is due to my long time appreciation for its practical user experiences.
+
+## Demo 
+[Click here (Vercel)](https://hn-govuk.vercel.app)
+
+## Tech highlights
+- [Next.js](https://nextjs.org/) (An awesome React framework for rapidly creating React applications without headaches)
+- [Hacker News API](https://github.com/HackerNews/API) (Hacker News provides an API for fetching their data)
+- React Hook
+- [GOV.UK Design System](https://design-system.service.gov.uk/)
+
+## Screenshots
+
+## Issues
+[A lot](https://github.com/killvung/hn-govuk/issues)
 
 ## Getting Started
 
