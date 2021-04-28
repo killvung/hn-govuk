@@ -27,7 +27,7 @@ The system provides sets of guidelines and principles to ensure their services a
 ![Story-Mobile](https://github.com/killvung/hn-govuk/blob/dev/screenshots/story-mobile.png)
 
 ## Issues
-Still a lot to fix, feel free to [submit](https://github.com/killvung/hn-govuk/issues) them
+Still a lot to fix, feel free to [submit an issue](https://github.com/killvung/hn-govuk/issues) or create a PR
 
 ## Getting Started
 
